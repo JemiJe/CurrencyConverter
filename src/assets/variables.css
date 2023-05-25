@@ -1,0 +1,14 @@
+:root {
+  --phone-width: 500px;
+
+  --header-bg: #353731;
+  --header-title-color: #cdff65;
+  --header-text: #ffffffde;
+  --body-bg: #3030303b;
+
+  --border-radius: 0.8em;
+
+  --converter-form-bg: #ffffffde;
+  --converter-form-border: #30303037;
+  --converter-form-shadow: 0 10px 20px 0 #b3bbc673;
+}

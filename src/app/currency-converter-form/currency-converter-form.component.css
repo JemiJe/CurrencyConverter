@@ -1,0 +1,38 @@
+.currency-converter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1em 0;
+  margin: 2em 0;
+  /* border: 1px solid var(--converter-form-border); */
+  border-radius: var(--border-radius);
+
+  background-color: var(--converter-form-bg);
+  box-shadow: var(--converter-form-shadow);
+}
+.currency-converter-form-section {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+}
+
+.currency-converter-transfer-icon {
+  width: 26px;
+  height: 26px;
+  background-image: url("../../assets/images/icons8-data-transfer-50.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 550px) {
+  .currency-converter-form-section {
+    width: 100%;
+    margin: 1em 2em;
+  }
+
+  .currency-converter-transfer-icon {
+    display: none;
+  }
+}

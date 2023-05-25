@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 0.8em 0;
+  background: var(--header-bg);
+  color: var(--header-text);
+  font-size: 1.2em;
+}
+
+header .header-title,
+header .header-current-currency {
+  margin: 0 2em;
+}
+
+header .header-title {
+  font-size: 1.2em;
+  color: var(--header-title-color);
+}
+
+.header-current-currency > span {
+  padding: 0 0.5em;
+}
+
+app-currency-converter-form {
+  display: flex;
+  justify-content: center;
+}

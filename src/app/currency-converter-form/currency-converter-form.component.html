@@ -1,0 +1,54 @@
+<div class="currency-converter-container">
+  <div class="currency-converter-form-section">
+    <mat-form-field>
+      <mat-label>Select currency</mat-label>
+      <mat-select
+        [(value)]="selectedFrom"
+        (selectionChange)="recalculateFrom()"
+      >
+        <mat-option
+          *ngFor="let code of currencyCodes; index as i"
+          [value]="code"
+          >{{ code }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Currency value</mat-label>
+      <input
+        matInput
+        (input)="calcExchangeTo()"
+        [(ngModel)]="valueFrom"
+        type="number"
+        id="valueFrom"
+        name="valueFrom"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="currency-converter-transfer-icon"></div>
+
+  <div class="currency-converter-form-section">
+    <mat-form-field>
+      <mat-label>Select currency</mat-label>
+      <mat-select [(value)]="selectedTo" (selectionChange)="recalculateTo()">
+        <mat-option
+          *ngFor="let code of currencyCodes; index as i"
+          [value]="code"
+          >{{ code }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Currency value</mat-label>
+      <input
+        matInput
+        (input)="calcExchangeFrom()"
+        [(ngModel)]="valueTo"
+        type="number"
+        id="valueTo"
+        name="valueTo"
+      />
+    </mat-form-field>
+  </div>
+</div>
