@@ -6,7 +6,6 @@
 
   padding: 1em 0;
   margin: 2em 0;
-  /* border: 1px solid var(--converter-form-border); */
   border-radius: var(--border-radius);
 
   background-color: var(--converter-form-bg);
@@ -18,21 +17,16 @@
   margin: 2em;
 }
 
-.currency-converter-transfer-icon {
-  width: 26px;
-  height: 26px;
-  background-image: url("../../assets/images/icons8-data-transfer-50.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 @media (max-width: 550px) {
   .currency-converter-form-section {
     width: 100%;
     margin: 1em 2em;
   }
-
-  .currency-converter-transfer-icon {
-    display: none;
+  .currency-converter-form-section:first-of-type {
+    margin-bottom: -0.8em;
   }
+}
+
+#swap-icon {
+  color: var(--swap-icon-color);
 }

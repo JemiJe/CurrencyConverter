@@ -1,9 +1,12 @@
 import { Component, Input, AfterViewChecked } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 import { codes, currObjType, roundCurrency } from '../global-vars';
 
@@ -18,6 +21,8 @@ import { codes, currObjType, roundCurrency } from '../global-vars';
     MatInputModule,
     FormsModule,
     CommonModule,
+    MatButtonModule,
+    MatIconModule,
   ],
 })
 export class CurrencyConverterFormComponent implements AfterViewChecked {
@@ -69,5 +74,18 @@ export class CurrencyConverterFormComponent implements AfterViewChecked {
     this.valueTo = Number(this.convertionRate)
       ? roundCurrency(this.valueFrom * this.convertionRate)
       : 1;
+  }
+
+  swapValues() {
+    const tempSelectedFrom = this.selectedFrom;
+    const tempValueFrom = this.valueFrom;
+
+    this.selectedFrom = this.selectedTo;
+    this.selectedTo = tempSelectedFrom;
+
+    this.valueFrom = this.valueTo;
+    this.valueTo = tempValueFrom;
+
+    this.setCovertionRate();
   }
 }

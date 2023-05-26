@@ -44,8 +44,6 @@ export class AppComponent implements OnInit {
     return {
       USD: roundCurrency(getUAHRates('USD')),
       EUR: roundCurrency(getUAHRates('EUR')),
-      // USD: Number(getUAHRates('USD')?.toFixed(2)),
-      // EUR: Number(getUAHRates('EUR')?.toFixed(2)),
     };
   }
 
@@ -55,6 +53,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.fillCurrencyData();
-    // console.dir(this.currencyArr);
   }
 }

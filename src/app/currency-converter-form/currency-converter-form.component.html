@@ -26,7 +26,14 @@
     </mat-form-field>
   </div>
 
-  <div class="currency-converter-transfer-icon"></div>
+  <button
+    mat-icon-button
+    aria-label="swap-values"
+    class="currency-converter-swap-btn"
+    (click)="swapValues()"
+  >
+    <mat-icon id="swap-icon">sync_alt</mat-icon>
+  </button>
 
   <div class="currency-converter-form-section">
     <mat-form-field>
