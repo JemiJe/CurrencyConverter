@@ -19,6 +19,10 @@ header .header-title {
   color: var(--header-title-color);
 }
 
+.header-current-currency {
+  display: flex;
+  flex-wrap: wrap;
+}
 .header-current-currency > span {
   padding: 0 0.5em;
 }
